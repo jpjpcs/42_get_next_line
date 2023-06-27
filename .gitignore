@@ -1,7 +1,1 @@
-.gitignore:gnlTester/*
-gnlTester/*
-
-.gitignore:testes/*
-testes/*
-gnlTester/tests
-gnlTester/tests/*
+gnlTester
