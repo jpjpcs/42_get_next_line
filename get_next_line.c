@@ -6,15 +6,93 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 11:39:34 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/27 03:19:11 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/27 04:08:26 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+// 1 - REPRODUZIR GET_NEXT_LINE
+// 2 - VER PARTE BONUS 
+// 3 - VERIFICAR TESTES TRIPOILLE E FRANCINETTE - CORRIGIR NORMINETTE E VERIFICAR LEAKS - TD OK -> ENTREGAR
 #include <fcntl.h>
 #include <unistd.h>
 #include "get_next_line.h"
 
-#include "get_next_line.h"
+/*
+ft_read_line function reads data from the file descriptor (fd) 
+into a temporary buffer (buf), and appends it to the existing 
+string that accumulates what its read (stash) until a newline 
+character is encountered or the end of file is reached.
+It dynamically allocates memory for the buf (buffer) 
+based on the defined BUFFER_SIZE in the header file.
+The function checks for errors in memory allocation and the read system call.
+The buf (buffer) is null-terminated by setting buf[bytes] = '\0'.
+Finally, the function frees the memory allocated for the  buf (buffer) 
+and returns the updated string stash (stash means accumulate).
+
+ft_get_line function extracts a line from the provided stash until a 
+newline character ('\n') or the end of the buffer is encountered.
+It dynamically allocates memory for the extracted line, considering 
+the presence of the newline character.
+The function copies characters from the stash variable to the line 
+until the newline character or end of the stash is reached.
+If a newline character is present, it appends the newline character to the line.
+The line is null-terminated by setting line[i] = '\0'.
+The function returns the extracted line.
+
+ft_new_line function extracts the remaining data from the stash after 
+the newline character. So get_line will read and store the data before \n, 
+and New_Line will do it after the \n.
+It searches for the newline character in the stash and determines the 
+remaining length of the stash after the newline.
+The function dynamically allocates memory for the remaining data.
+It copies the remaining characters from the stash to the new string 
+that is the newline (or the nextline after the previous one).
+The newline is null-terminated by setting newline[j] = '\0'.
+Finally, the function frees the memory allocated for the stash 
+and returns the remaining data.
+
+get_next_line function is the entry point for retrieving lines from a file.
+It takes a file descriptor (fd) as an argument.
+The function checks if the file descriptor is valid and if the buffer size is positive.
+It calls ft_read_line to read data from the file into the stash.
+Then, it calls ft_get_line to extract a line from the stash.
+Finally, it calls ft_new_line to extract the remaining data after the line from the stash.
+The function returns the extracted line. It repeats the process of reading lines 
+from a file by utilizing a static buffer to store the data between function calls. 
+Here's an explanation of how it works:
+
+1 - The get_next_line function takes a file descriptor (fd) as an 
+argument and initializes a static buffer variable (stash) to 
+store the data read from the file.
+2 - It first performs some basic error checks to ensure that the 
+file descriptor is valid (fd >= 0) and the buffer size is positive 
+(BUFFER_SIZE > 0). If any of these conditions are not met, it returns 0 
+or NULL to indicate an error.
+3 - Next, it calls the ft_read_line function, passing the file descriptor 
+and the stash. The ft_read_line function reads data from the file 
+into the buffer until it encounters a newline character or reaches the end of the file.
+4 - Once the data is read into the stash, the ft_get_line function is called, passing the stash as an argument.
+This function extracts a line from the stah up to the newline character or the end of the buffer. 
+It dynamically allocates memory for the extracted line and copies the characters from the stash to the line.
+5 - After extracting the line, the ft_new_line function is called, passing again the stash as an argument. 
+This function extracts the remaining data after the newline character from the stash. 
+It dynamically allocates memory for the remaining data, copies the characters to a new string (the newline), 
+and frees the memory previously allocated for the stash.
+6 - The extracted line is returned from the get_next_line function.
+7 - When the get_next_line function is called again, it resumes from where it left off, 
+using the static variable (stash) to retrieve the next line from the file. 
+The static stash retains the remaining data from the previous call, and any new data read from the file is appended to it. 
+This allows the function to continue reading lines from the file until the end is reached.
+8 - The process continues until there are no more lines to read or an error occurs.
+
+It's important to note that this implementation assumes that the file being read 
+contains lines terminated by newline characters ('\n'). The code reads and processes 
+the file one line at a time, and each call to get_next_line retrieves the next line from the file. 
+The static buffer retains any remaining data after the last newline character, 
+ensuring that it's included in the subsequent calls to get_next_line.
+
+*/
 
 char *ft_read_line(int fd, char *stash)
 {
@@ -112,7 +190,7 @@ char *get_next_line(int fd)
     return (line);
 }
 
-
+/* 
 int main(void)
 {
     int fd;
@@ -136,4 +214,4 @@ int main(void)
     close(fd); // Close the file
 
     return 0;
-} 
+}  */
