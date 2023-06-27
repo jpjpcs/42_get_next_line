@@ -6,12 +6,12 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 11:39:34 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/27 04:08:26 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/27 04:35:29 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-// 1 - REPRODUZIR GET_NEXT_LINE
+// 1 - ACABAR DE ESCREVER EXPLICAÇÃO DO GNL no caderno e REPRODUZIR GET_NEXT_LINE
 // 2 - VER PARTE BONUS 
 // 3 - VERIFICAR TESTES TRIPOILLE E FRANCINETTE - CORRIGIR NORMINETTE E VERIFICAR LEAKS - TD OK -> ENTREGAR
 #include <fcntl.h>
