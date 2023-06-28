@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 11:39:34 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/28 11:02:51 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/28 13:11:19 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@
 //The static stash retains the remaining data from the previous call,
 //	and any new data read from the file is appended to it. 
 //This allows the function to continue reading lines from the file until 
-//the end is reached.
+
 //8- The process continues until there are no more lines to read or an 
 //error occurs.
 //
