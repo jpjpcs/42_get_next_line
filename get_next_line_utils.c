@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 03:05:50 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/27 03:06:23 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/28 10:21:20 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strchr(char *stash, int target)
 			return (&stash[i]);
 		i++;
 	}
-	if ((unsigned char )stash[i] == (unsigned char)target)
+	if ((unsigned char)stash[i] == (unsigned char)target)
 		return (&stash[i]);
 	return (NULL);
 }
@@ -53,7 +53,7 @@ char	*ft_strjoin(char *stash, char const *buf)
 	}
 	i = ft_strlen(stash);
 	j = 0;
-	join = (char *)malloc(sizeof(stash[0]) * (ft_strlen(stash) + ft_strlen(buf) + 1));
+	join = (char *)malloc(sizeof(stash[0]) * (i + ft_strlen(buf) + 1));
 	if (join == NULL)
 		return (NULL);
 	while (stash[j])
