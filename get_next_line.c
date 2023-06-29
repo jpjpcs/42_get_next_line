@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 11:39:34 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/29 22:17:47 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/29 22:51:26 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,25 @@
 // 2 - VER PARTE BONUS
 // 3- VERIFICAR TESTES TRIPOILLE E FRANCINETTE 
 //- CORRIGIR NORMINETTE E VERIFICAR LEAKS- TD OK -> ENTREGAR
+// Dúvidas: 
+// 1 - Stdin (standard input) files
+// 2 - Read multiple files starting where it left
+// 3 - How bonus changes make this? What changed?
+// 4 - Does your function still work if the BUFFER_SIZE value is 9999? If it is 1? 10000000? Do you know why?
+//5 - What it means "undefined behavior if the file pointed to
+//by the file descriptor changed since the last call"
+// 6 - How the code is dealing with that "undefined behavior when reading
+//a binary file."
+// 7 - Bonus: That was already done: "Develop get_next_line() using only one static variable"
+// 8 - what this means "read from a different fd per call without losing the reading thread of each
+//file descriptor or returning a line from another fd.
+//It means that you should be able to call get_next_line() to read from fd 3, then
+//fd 4, then 5, then once again 3, once again 4, and so forth."
+// 9 - What this means " A file descriptor does not only point to regular files.
+//Be smart and cross-check with your peers. " 
+// 10 - How? "add your get_next_line() to your libft"
+
+
 
 //GENERAL EXPLANATION:
 //1 - The get_next_line function takes a file descriptor (fd) as an 
