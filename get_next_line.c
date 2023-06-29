@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 11:39:34 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/29 21:06:48 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/06/29 22:17:47 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,8 @@
 // Line 1 - Temporary buffer to read data from the file
 // Line 2 - Number of bytes read
 // Line 3 - Allocate memory for the temporary buffer
-// Line 7 - Continue reading until a newline is found in the stash or end of file is reached
+// Line 7 - Continue reading until a newline is found in the stash or 
+//end of file is reached
 // Line 9 - // Read data from the file into the buffer
 // Line 15 - Null-terminate the buffer
 // Line 18 - Append the buffer to the stash
