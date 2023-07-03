@@ -11,21 +11,26 @@ The function uses a static variable to store the remaining characters from the p
 ### Functions 
 It is composed by 4 main functions (Get_Next_Line, Read_Line, Get_Line, Next_Line) and 3 helper functions (strchr, strlen, strjoin):
 
+```markdown
 Get_Next_Line: Creates buffer (buf) variable and stash (the static variable - stash mean accumulate), and calls also the other 4 main functions.
-
 ft_read_line: Reads the Line to the buffer (buf), and copies that data from buffer to stash (static varibale) until it founds a \n.
 ft_get_line: Extracts the first line from a string (the stash), up to the newline character or end of string.
-ft_new_line: Extracts the remaining line from the string (stash) after the newline character. In each call it stores that value on the stash, and when the Get_Next_Line function is called, stash starts from the point it was read. 
+ft_new_line: Extracts the remaining line from the string (stash) after the newline character. In each call it stores that value on the stash, and when the Get_Next_Line function is called, stash starts from the point it was read.
+```
 
 ### Example
 In the phrase "I love to code \n at 42 school.", read_line reads n characters - defined by the buffer size - and store it at stash. If buffer size is 5, it will read 5 characters until it reaches "I love to code \n at " - that is 20 characters. 
 After that, get line extracts it from stash until \n - ""I love to code \n". New_Line extracts after \n - " at 42 school.")
 
+```markdown
 ft_strlen: Calculates the length of a string.
 ft_strchr: Locates the first occurrence of a character in a string (the character that we are searching. In the case above \n).
 ft_strjoin: Concatenates two strings, dynamically allocating memory for the result.
+```
 
 ### Allowed functions
+| Functions | Description                                                                                                  |
+|-----------|--------------------------------------------------------------------------------------------------------------|
 | malloc	| Allocates a block of memory of the specified size in bytes. Returns a pointer to the allocated memory or NULL.|
 | free | Deallocates the previously allocated memory block. |
 | read | Reads data from a file descriptor into a buffer. Returns the number of bytes read or -1 on error.|
