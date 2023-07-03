@@ -1,6 +1,6 @@
 # 42_get_next_line (char *get_next_line(int fd);)
 
-# Get Next Line Resume
+# Resume
 
 Is a program that reads and returns a line from a file descriptor each time it is called. It reads the file until it reaches its end.
 
