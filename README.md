@@ -87,8 +87,11 @@ The size of the buffer used to read from the file descriptor. If not specified, 
 
 # Videos
 See this videos to help you clarify and understand this project better:
+```markdown
 https://www.youtube.com/watch?v=-Mt2FdJjVno
 https://www.youtube.com/watch?v=8E9siq7apUU
+https://pt.wikipedia.org/wiki/Vari%C3%A1vel_est%C3%A1tica
+```
 
 # Tests
 Francinette: https://github.com/xicodomingues/francinette
