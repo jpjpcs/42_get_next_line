@@ -71,6 +71,6 @@ The size of the buffer used to read from the file descriptor. If not specified, 
 
 ◦ NULL: there is nothing else to read, or an error occurred.
 
-# Tests:
+# Tests
 Francinette: https://github.com/xicodomingues/francinette
 gnlTester: https://github.com/Tripouille/gnlTester
