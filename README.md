@@ -34,6 +34,10 @@ ft_strjoin: Concatenates two strings, dynamically allocating memory for the resu
 | malloc	| Allocates a block of memory of the specified size in bytes. Returns a pointer to the allocated memory or NULL.|
 | free | Deallocates the previously allocated memory block. |
 | read | Reads data from a file descriptor into a buffer. Returns the number of bytes read or -1 on error.|
+
+### Forbidden functions
+| Functions | Description                                                                                                  |
+|-----------|--------------------------------------------------------------------------------------------------------------|
 | ❌ libft |	Usage of our libft project library is NOT allowed. |
 | lseek() | It stops where we left our reading. | 
 | Global variables | Are forbidden because we can use it to substitute static variables. |
