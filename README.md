@@ -18,7 +18,7 @@ ft_get_line: Extracts the first line from a string (the stash), up to the newlin
 ft_new_line: Extracts the remaining line from the string (stash) after the newline character. In each call it stores that value on the stash, and when the Get_Next_Line function is called, stash starts from the point it was read.
 ```
 
-### Example
+#### Example
 In the phrase "I love to code \n at 42 school.", read_line reads n characters - defined by the buffer size - and store it at stash. If buffer size is 5, it will read 5 characters until it reaches "I love to code \n at " - that is 20 characters. 
 After that, get line extracts it from stash until \n - ""I love to code \n". New_Line extracts after \n - " at 42 school.")
 
@@ -27,6 +27,11 @@ ft_strlen: Calculates the length of a string.
 ft_strchr: Locates the first occurrence of a character in a string (the character that we are searching. In the case above \n).
 ft_strjoin: Concatenates two strings, dynamically allocating memory for the result.
 ```
+
+### Bonus (difference between bonus and mandatory)
+The only difference between the mandatory and bonus parts is the addition of support for multiple file descriptors (stash[MAX_FILES]). The stash array is used to store the accumulated data for each file descriptor separately, allowing simultaneous reading from multiple files.
+
+The main difference between the mandatory and bonus parts is that the bonus part includes the additional functionality of handling multiple file descriptors, whereas the mandatory part only focuses on reading from a single file descriptor.
 
 ### Allowed functions
 | Functions | Description                                                                                                  |
