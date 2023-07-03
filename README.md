@@ -8,7 +8,7 @@ The function returns a pointer to a string containing the line that was read, wi
 
 The function uses a static variable to store the remaining characters from the previous call, if any.
 
-### Functions: 
+### Functions 
 It is composed by 4 main functions (Get_Next_Line, Read_Line, Get_Line, Next_Line) and 3 helper functions (strchr, strlen, strjoin):
 
 Get_Next_Line: Creates buffer (buf) variable and stash (the static variable - stash mean accumulate), and calls also the other 4 main functions.
