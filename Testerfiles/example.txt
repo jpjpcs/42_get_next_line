@@ -1,0 +1,9 @@
+My name is "\n" João Silva.
+I´m enjoying "\0" Get_Next_Line. 
+Really. 
+
+
+
+nothing in the 3 lines above. 
+
+test with nothing.

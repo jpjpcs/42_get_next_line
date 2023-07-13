@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 17:14:08 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/28 17:16:50 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/07/13 15:56:56 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # endif
 
 # ifndef MAX_FILES
-#  define MAX_FILES 500
+#  define MAX_FILES 500 //definition of the amount of files to read in the header file
 # endif
 
 char	*get_next_line(int fd);

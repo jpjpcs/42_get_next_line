@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 17:17:59 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/06/28 18:36:03 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/07/13 15:52:22 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,11 +98,11 @@ char	*get_next_line(int fd)
 	char		*line;
 	static char	*stash[MAX_FILES];
 
-	if (fd < 0 || fd > MAX_FILES || BUFFER_SIZE <= 0)
-		return (NULL);
-	stash [fd] = ft_read_line(fd, stash[fd]);
-	if (!stash[fd])
-		return (NULL);
+	if (fd < 0 || fd > MAX_FILES || BUFFER_SIZE <= 0) // the first difference between mandatory and bonus is MAX_FILES (which is the max number of files that can be opened at the same time: 256). 
+		return (NULL);									//I predefined to 500 in the header file.
+	stash [fd] = ft_read_line(fd, stash[fd]); // the second difference is that I'm using fd position [fd] to store the stash of each file. 
+	if (!stash[fd])				//this memorizes the line read from the file before passing to the new file to read (if there is one)
+		return (NULL);	// 3rd difference is in the definition of the amount of files to read in the header file.
 	line = ft_get_line(stash[fd]);
 	stash[fd] = ft_new_line(stash[fd]);
 	return (line);
