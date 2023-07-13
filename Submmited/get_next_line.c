@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 11:39:34 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/07/13 16:03:36 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/07/13 16:46:01 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -349,7 +349,7 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-int	main(void)
+/*int	main(void)
 {
     int fd;
     char *line;
@@ -373,4 +373,4 @@ int	main(void)
     close(fd); // Close the file
 
     return (0);
-}
+}*/

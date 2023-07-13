@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 03:05:50 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/07/13 16:28:06 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/07/13 17:22:20 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,9 @@ char	*ft_strjoin(char *stash, char const *buf)
 		join[j] = stash[j];
 		j++;
 	}
-	j = -1; // I need to reset j to -1 because I will increment it before using it. why? because I want to start from 0. and why I don't use 0 right away instead of -1? because I want to start from the end of stash,and thats only possible if I increment j before using it.
-	while (buf[++j])	// I need to increment j before using it, because I want to start from 0.
-		join[i + j] = buf[j]; // I need to use i + j, because I want to start from the end of stash. 
+	j = -1; // I need to reset j to -1 because I need him to be 0 in the next line. I need it to be i + 0. Suppose: join=Hello buf =World. 
+	while (buf[++j])	//Len of join is 5, and I want to copy the position 0 of buf to the position 5 of join. Its the same of initializing j to 0, but I want to reduce 1 line of code, since the function already has 25, and with j = 0 I will have to include another one (j++) surpassing the 25 lines limit allowed by norminette.
+		join[i + j] = buf[j]; // I need to increment j before using it, because I want to start from 0. I need to use i + j, because I want to start from the end of join variable, taht was copied from the stash. 
 	join[i + j] = '\0';
 	free(stash);
 	return (join);
