@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 11:39:34 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/07/13 17:27:34 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/07/13 18:09:52 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 // 2 - VER PARTE BONUS
 // 3- VERIFICAR TESTES TRIPOILLE E FRANCINETTE 
 //- CORRIGIR NORMINETTE E VERIFICAR LEAKS- TD OK -> ENTREGAR
-// Dúvidas: 
+// Dúvidas (respostas no GPT): 
 // 1 - Stdin (standard input) files
 // 2 - Read multiple files starting where it left
 // 3 - How bonus changes make this? What changed?
